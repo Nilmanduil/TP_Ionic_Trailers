@@ -1,14 +1,19 @@
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import {Component, ViewChild} from '@angular/core';
+import {NavController, Platform} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+import {SettingsPage} from "../pages/settings/settings";
+import {TrailerPage} from "../pages/trailer/trailer";
+import {LoginPage} from "../pages/login/login";
+import {FavoritesPage} from "../pages/favorites/favorites";
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   rootPage:any = HomePage;
+  @ViewChild('mainMenu') nav: NavController
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -17,6 +22,23 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
+  }
+
+  goToTrailer(): void {
+    this.nav.push(TrailerPage);
+
+  }
+
+  goToFavorites(): void {
+    this.nav.push(FavoritesPage);
+  }
+
+  goToLogin(): void {
+    this.nav.push(LoginPage);
+  }
+
+  goToSettings(): void {
+    this.nav.push(SettingsPage);
   }
 }
 

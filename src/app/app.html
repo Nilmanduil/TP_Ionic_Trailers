@@ -9,13 +9,11 @@
 
   <ion-content>
     <ion-list>
-      <button ion-item><ion-icon name="person" item-start></ion-icon> Login</button>
-      <button ion-item><ion-icon name="star" item-start></ion-icon> Favoris</button>
-      <button ion-item><ion-icon name="settings" item-start></ion-icon> Préférences</button>
+      <button ion-item (click)="goToLogin()"><ion-icon name="person" item-start></ion-icon> Login</button>
+      <button ion-item (click)="goToFavorites()"><ion-icon name="star" item-start></ion-icon> Favoris</button>
+      <button ion-item (click)="goToSettings()"><ion-icon name="settings" item-start></ion-icon> Préférences</button>
     </ion-list>
   </ion-content>
 </ion-menu>
 
-<ion-nav #mainMenu [root]="rootPage">
-
-</ion-nav>
+<ion-nav #mainMenu [root]="rootPage"></ion-nav>
