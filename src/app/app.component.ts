@@ -24,11 +24,6 @@ export class MyApp {
     });
   }
 
-  goToTrailer(): void {
-    this.nav.push(TrailerPage);
-
-  }
-
   goToFavorites(): void {
     this.nav.push(FavoritesPage);
   }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {TrailerAPI} from "../../services/TrailerAPI";
+import {TrailerPage} from "../trailer/trailer";
 
 @Component({
   selector: 'page-home',
@@ -17,6 +18,8 @@ export class HomePage {
       );
   }
 
-
+  goToDetails(trailer: Object): void {
+    this.navCtrl.push(TrailerPage, trailer);
+  }
 
 }

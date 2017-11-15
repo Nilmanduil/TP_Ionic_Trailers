@@ -1,3 +1,10 @@
 page-home {
-
+  .trailer {
+    img.poster {
+      max-height: 100px;
+      max-width: 100px;
+      height: auto;
+      width: auto;
+    }
+  }
 }

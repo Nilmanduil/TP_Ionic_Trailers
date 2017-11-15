@@ -7,9 +7,17 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-list>
+    <button ion-item class="trailer" *ngFor="let trailer of movies" (click)="goToDetails(trailer)">
+      <img class="poster" src="{{trailer.poster}}" alt="{{trailer.title}}" item-start />
+      <h2>{{trailer.title}}</h2>
+      <h3>Genres :</h3>
+      <ul>
+        <li *ngFor="let currentGenre of trailer.genre">
+          {{currentGenre}}
+        </li>
+      </ul>
+    </button>
+  </ion-list>
 </ion-content>
