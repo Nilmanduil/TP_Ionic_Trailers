@@ -5,7 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import {SettingsPage} from "../pages/settings/settings";
-import {TrailerPage} from "../pages/trailer/trailer";
 import {LoginPage} from "../pages/login/login";
 import {FavoritesPage} from "../pages/favorites/favorites";
 @Component({
