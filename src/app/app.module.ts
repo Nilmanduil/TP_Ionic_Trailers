@@ -10,6 +10,8 @@ import {TrailerPage} from "../pages/trailer/trailer";
 import {LoginPage} from "../pages/login/login";
 import {SettingsPage} from "../pages/settings/settings";
 import {FavoritesPage} from "../pages/favorites/favorites";
+import {TrailerAPI} from "../services/TrailerAPI";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import {FavoritesPage} from "../pages/favorites/favorites";
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -36,7 +39,8 @@ import {FavoritesPage} from "../pages/favorites/favorites";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    TrailerAPI
   ]
 })
 export class AppModule {}
