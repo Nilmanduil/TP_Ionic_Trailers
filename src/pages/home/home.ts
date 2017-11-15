@@ -13,6 +13,7 @@ export class HomePage {
   constructor(public navCtrl: NavController, private api: TrailerAPI) {
       api.getTrailers().subscribe(
         (trailers) => {
+          console.log(trailers);
           this.movies = trailers;
         }
       );

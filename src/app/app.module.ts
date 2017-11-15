@@ -3,6 +3,8 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -11,7 +13,7 @@ import {LoginPage} from "../pages/login/login";
 import {SettingsPage} from "../pages/settings/settings";
 import {FavoritesPage} from "../pages/favorites/favorites";
 import {TrailerAPI} from "../services/TrailerAPI";
-import {HttpClientModule} from "@angular/common/http";
+import {UserService} from "../services/UserService";
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -40,7 +43,8 @@ import {HttpClientModule} from "@angular/common/http";
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    TrailerAPI
+    TrailerAPI,
+    UserService
   ]
 })
 export class AppModule {}

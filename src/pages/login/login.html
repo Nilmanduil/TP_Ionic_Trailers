@@ -1,12 +1,23 @@
 <ion-header>
-
   <ion-navbar>
     <ion-title>Login</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content padding align="center">
+  <form (ngSubmit)="clickSubmit()">
+    <p>
+      <input ion-input name="login" [(ngModel)]="login" placeholder="Login" />
+    </p>
+    <p class="error" *ngIf="loginError != ''">{{loginError}}</p>
+    <p>
+      <input ion-input name="password" [(ngModel)]="password" type="password" placeholder="Password" />
+    </p>
+    <p class="error" *ngIf="passwordError != ''">{{passwordError}}</p>
+    <p>
+      <ion-label><ion-checkbox name="remember" [(ngModel)]="remember"></ion-checkbox> Se souvenir de moi</ion-label>
+    </p>
+    <button ion-button type="submit">Login</button>
+  </form>
 </ion-content>

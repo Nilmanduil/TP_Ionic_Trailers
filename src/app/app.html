@@ -1,7 +1,7 @@
 <ion-menu [content]="mainMenu">
   <ion-header>
     <ion-navbar>
-      <button ion-button menuClose><ion-icon name="close"></ion-icon></button>
+      <button ion-button menuToggle><ion-icon name="close"></ion-icon></button>
       <ion-title>
         Menu
       </ion-title>
@@ -10,7 +10,7 @@
 
   <ion-content>
     <ion-list>
-      <button ion-item (click)="goToLogin()"><ion-icon name="person" item-start></ion-icon> Login</button>
+      <button ion-item (click)="goToLogin()" (logEvent)="handleLog($event)"><ion-icon name="person" item-start></ion-icon> Login</button>
       <button ion-item (click)="goToFavorites()"><ion-icon name="star" item-start></ion-icon> Favoris</button>
       <button ion-item (click)="goToSettings()"><ion-icon name="settings" item-start></ion-icon> Préférences</button>
     </ion-list>

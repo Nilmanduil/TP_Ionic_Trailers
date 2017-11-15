@@ -10,7 +10,7 @@ export class TrailerAPI {
 
   constructor(private http: HttpClient) {  }
 
-  getTrailers(): Observable<Array<Object>> {
+  getTrailers(): Observable<any> {
     return this.http.get(`${API_BASE_URL}${API_TRAILERS}`);
   }
 
