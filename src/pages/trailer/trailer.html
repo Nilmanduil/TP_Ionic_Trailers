@@ -1,12 +1,25 @@
 <ion-header>
-
   <ion-navbar>
-    <ion-title>Trailer</ion-title>
+    <ion-title>{{trailer.title}}</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
+  <p align="center">
+    <img src="{{trailer.poster}}" alt="Poster">
+  </p>
+  <h2>Genre :</h2>
+  <ul>
+    <li *ngFor="let currentGenre of trailer.genre">
+      {{currentGenre}}
+    </li>
+  </ul>
 
+  <h2>Acteurs :</h2>
+  <ul>
+    <li *ngFor="let actor of trailer.actors">
+      {{actor}}
+    </li>
+  </ul>
 </ion-content>

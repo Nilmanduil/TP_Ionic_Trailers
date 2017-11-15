@@ -15,7 +15,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TrailerPage {
 
+  trailer: Object;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.trailer = navParams.data;
   }
 
   ionViewDidLoad() {
